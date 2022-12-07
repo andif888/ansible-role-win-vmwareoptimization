@@ -1,25 +1,25 @@
 ---
 # tasks file for ansible-role-win-vmwareoptimization
 - name: Download PSTools
-  win_get_url:
+  ansible.windows.win_get_url:
     url: '{{ ps_tools_download_url }}'
     dest: '{{ vmware_optimization_tool_install_path }}\{{ ps_tools_filename_zip }}'
     force: no
 
 - name: PSTools - Unzip
-  win_unzip:
+  community.windows.win_unzip:
     src: '{{ vmware_optimization_tool_install_path }}\{{ ps_tools_filename_zip }}'
     dest: '{{ vmware_optimization_tool_install_path }}\'
     delete_archive: yes
 
 - name: Download VMwareHorizonOSOptimizationTool
-  win_get_url:
+  ansible.windows.win_get_url:
     url: '{{ vmware_optimization_tool_download_url }}'
     dest: '{{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }}'
     force: no
 
 - name: Exec VMwareHorizonOSOptimizationTool
-  win_command: 'psexec.exe -accepteula -nobanner -i 1 -s {{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }} {{ vmware_optimization_tool_commandline_args }}'
+  ansible.windows.win_command: 'psexec.exe -accepteula -nobanner {{ ps_tools_commandline_args | default(omit) }} {{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }} {{ vmware_optimization_tool_commandline_args }}'
   args:
     chdir: '{{ vmware_optimization_tool_install_path }}'
   register: output
