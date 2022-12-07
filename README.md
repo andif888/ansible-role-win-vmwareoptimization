@@ -5,6 +5,7 @@ Ansible Role to run VMwareOSOptimizationTool
 ## Table of content
 
 - [Default Variables](#default-variables)
+  - [ps_tools_commandline_args](#ps_tools_commandline_args)
   - [ps_tools_download_url](#ps_tools_download_url)
   - [ps_tools_filename_zip](#ps_tools_filename_zip)
   - [vmware_optimization_tool_commandline_args](#vmware_optimization_tool_commandline_args)
@@ -18,6 +19,14 @@ Ansible Role to run VMwareOSOptimizationTool
 ---
 
 ## Default Variables
+
+### ps_tools_commandline_args
+
+#### Default value
+
+```YAML
+ps_tools_commandline_args: -i 1 -s
+```
 
 ### ps_tools_download_url
 

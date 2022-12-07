@@ -3,7 +3,7 @@
 vmware_optimization_tool_download_url: 'https://download3.vmware.com/software/vmw-tools/osoptimization/VMwareHorizonOSOptimizationTool-x86_64-2107.exe'
 ps_tools_download_url: 'https://download.sysinternals.com/files/PSTools.zip'
 ps_tools_filename_zip: 'PSTools.zip'
-# ps_tools_commandline_args: '-i 1 -s'
+ps_tools_commandline_args: '-i 1 -s'
 vmware_optimization_tool_filename_exe: 'VMwareHorizonOSOptimizationTool.exe'
 vmware_optimization_tool_install_path: 'C:\Windows\Temp'
 vmware_optimization_tool_commandline_args: '-v -o -SyncHkcuToHku Enable -VisualEffect Balanced -Notification Disable -WindowsUpdate disable -OfficeUpdate Enable -WindowsSearch SearchboxAsIcon -StoreApp remove-all -Background "#0063B1" -Firewall Enable -AntiVirus Enable -SecurityCenter Enable -SmartScreen Disable'

@@ -19,7 +19,7 @@
     force: no
 
 - name: Exec VMwareHorizonOSOptimizationTool
-  ansible.windows.win_command: 'psexec.exe -accepteula -nobanner {{ ps_tools_commandline_args | default(omit) }} {{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }} {{ vmware_optimization_tool_commandline_args }}'
+  ansible.windows.win_command: 'psexec.exe -accepteula -nobanner {{ ps_tools_commandline_args }} {{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }} {{ vmware_optimization_tool_commandline_args }}'
   args:
     chdir: '{{ vmware_optimization_tool_install_path }}'
   register: output
