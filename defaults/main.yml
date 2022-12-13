@@ -1,6 +1,7 @@
 ---
 # defaults file for ansible-role-win-vmwareoptimization
 vmware_optimization_tool_download_url: 'https://download3.vmware.com/software/vmw-tools/osoptimization/VMwareHorizonOSOptimizationTool-x86_64-2107.exe'
+vmware_optimization_tool_download_validate_certs: true
 ps_tools_download_url: 'https://download.sysinternals.com/files/PSTools.zip'
 ps_tools_filename_zip: 'PSTools.zip'
 ps_tools_commandline_args: '-i 1 -s'

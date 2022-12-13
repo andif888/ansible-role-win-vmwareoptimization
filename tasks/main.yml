@@ -4,6 +4,7 @@
   ansible.windows.win_get_url:
     url: '{{ ps_tools_download_url }}'
     dest: '{{ vmware_optimization_tool_install_path }}\{{ ps_tools_filename_zip }}'
+    validate_certs: "{{ vmware_optimization_tool_download_validate_certs }}"
     force: no
 
 - name: PSTools - Unzip
@@ -16,6 +17,7 @@
   ansible.windows.win_get_url:
     url: '{{ vmware_optimization_tool_download_url }}'
     dest: '{{ vmware_optimization_tool_install_path }}\{{ vmware_optimization_tool_filename_exe }}'
+    validate_certs: "{{ vmware_optimization_tool_download_validate_certs }}"
     force: no
 
 - name: Exec VMwareHorizonOSOptimizationTool

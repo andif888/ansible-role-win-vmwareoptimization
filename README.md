@@ -10,6 +10,7 @@ Ansible Role to run VMwareOSOptimizationTool
   - [ps_tools_filename_zip](#ps_tools_filename_zip)
   - [vmware_optimization_tool_commandline_args](#vmware_optimization_tool_commandline_args)
   - [vmware_optimization_tool_download_url](#vmware_optimization_tool_download_url)
+  - [vmware_optimization_tool_download_validate_certs](#vmware_optimization_tool_download_validate_certs)
   - [vmware_optimization_tool_filename_exe](#vmware_optimization_tool_filename_exe)
   - [vmware_optimization_tool_install_path](#vmware_optimization_tool_install_path)
 - [Dependencies](#dependencies)
@@ -61,6 +62,14 @@ vmware_optimization_tool_commandline_args: -v -o -SyncHkcuToHku Enable -VisualEf
 
 ```YAML
 vmware_optimization_tool_download_url: https://download3.vmware.com/software/vmw-tools/osoptimization/VMwareHorizonOSOptimizationTool-x86_64-2107.exe
+```
+
+### vmware_optimization_tool_download_validate_certs
+
+#### Default value
+
+```YAML
+vmware_optimization_tool_download_validate_certs: true
 ```
 
 ### vmware_optimization_tool_filename_exe
